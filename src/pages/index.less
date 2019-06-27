@@ -1,0 +1,35 @@
+.tabs {
+  color: white;
+  :global {
+    .braft-editor-wrapper, .draft-js, .react-quill, .trix-editor {
+      background: white;
+      color: black;
+    }
+
+    .draft-js {
+      min-height: 300px;
+    }
+
+    .trix-editor {
+      trix-editor {
+        height: 300px;
+      }
+      
+    }
+
+    .react-quill {
+      .ql-container {
+        min-height: 265px;
+      }
+    }
+
+    .ckeditor-5 {
+      .ck-content {
+        min-height: 265px;
+        color: black;
+      }
+    }
+    
+  }
+}
+

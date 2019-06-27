@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Paste from Excel</title>
+  <script src="https://cdn.ckeditor.com/4.11.4/standard-all/ckeditor.js"></script>
+  <style type="text/css">
+    /* Minimal styling to center the editor in this sample */
+    .container {
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .inner-container {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" data-sample-short>&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href=&quot;https://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;</div>
+  <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short>&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href=&quot;https://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;</textarea>
+  <script>
+    CKEDITOR.replace('editor1', {
+      // Define the toolbar: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_toolbar
+      // The full preset from CDN which we used as a base provides more features than we need.
+      // Also by default it comes with a 3-line toolbar. Here we put all buttons in a single row.
+      toolbar: [{
+          name: 'clipboard',
+          items: ['PasteFromWord', '-', 'Undo', 'Redo']
+        },
+        {
+          name: 'basicstyles',
+          items: ['Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'Subscript', 'Superscript']
+        },
+        {
+          name: 'links',
+          items: ['Link', 'Unlink']
+        },
+        {
+          name: 'paragraph',
+          items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
+        },
+        {
+          name: 'insert',
+          items: ['Image', 'Table']
+        },
+        {
+          name: 'editing',
+          items: ['Scayt']
+        },
+        '/',
+
+        {
+          name: 'styles',
+          items: ['Format', 'Font', 'FontSize']
+        },
+        {
+          name: 'colors',
+          items: ['TextColor', 'BGColor', 'CopyFormatting']
+        },
+        {
+          name: 'align',
+          items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+        },
+        {
+          name: 'document',
+          items: ['Print', 'Source']
+        }
+      ],
+
+      // Enabling extra plugins, available in the full-all preset: https://ckeditor.com/cke4/presets
+      extraPlugins: 'colorbutton,font,justify,print,tableresize,pastefromword,liststyle',
+      removeButtons: '',
+
+      // Make the editing area bigger than default.
+      height: 350,
+      width: 940
+    });
+  </script>
+</body>
+
+</html>

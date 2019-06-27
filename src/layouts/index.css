@@ -1,0 +1,10 @@
+.normal {
+  height: 100%;
+  padding: 16px;
+  background: black;
+  overflow: auto;
+}
+
+.title {
+  color: white;
+}
