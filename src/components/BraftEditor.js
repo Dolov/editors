@@ -4,7 +4,6 @@ import React from 'react'
 import BraftEditor from 'braft-editor'
 import Table from 'braft-extensions/dist/table'
 
-
 const options = {
   withDropdown: true, // 插入表格前是否弹出下拉菜单
 }

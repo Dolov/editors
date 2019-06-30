@@ -16,6 +16,7 @@
     "braft-extensions": "^0.0.18",
     "ckeditor4-react": "^1.0.0-beta",
     "draft-js": "^0.10.5",
+    "load-script": "^1.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-froala-wysiwyg": "^3.0.0",

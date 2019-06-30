@@ -1,16 +1,20 @@
 import React from 'react'
-import CKEditor from 'ckeditor4-react';
+import CKEditor from 'ckeditor4-react'
 
 export default class CKEditor4 extends React.PureComponent {
+
+  componentDidMount() {
+    
+  }
 
   render() {
     return (
       <CKEditor
         config={{
           uiColor: '#E0F2F4',
-          extraPlugins: `image2,tableresize,autogrow,colorbutton,print,font,colordialog,codesnippet,
-            mathjax,placeholder,copyformatting,magicline,bidi,language,
-            pastefromword,liststyle,justify,uploadimage,uploadfile`,
+          // extraPlugins: `image2,tableresize,autogrow,colorbutton,print,font,colordialog,codesnippet,
+          //   mathjax,placeholder,copyformatting,magicline,bidi,language,uicolor,timestamp,
+          //   pastefromword,liststyle,justify,uploadimage,uploadfile`,
           autoGrow_minHeight: 200,
           autoGrow_maxHeight: 600,
           autoGrow_bottomSpace: 50,
@@ -18,6 +22,7 @@ export default class CKEditor4 extends React.PureComponent {
           mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML',
           language_list: ['ar:Arabic:rtl', 'fr:French', 'he:Hebrew:rtl', 'es:Spanish'],
           
+
       // Define the toolbar: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_toolbar
       // The full preset from CDN which we used as a base provides more features than we need.
       // Also by default it comes with a 3-line toolbar. Here we put all buttons in two rows.
@@ -107,10 +112,10 @@ export default class CKEditor4 extends React.PureComponent {
 
       // An array of stylesheets to style the WYSIWYG area.
       // Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.
-      // contentsCss: [
-      //   'http://cdn.ckeditor.com/4.11.4/full-all/contents.css',
-      //   'assets/css/pastefromword.css'
-      // ],
+      contentsCss: [
+        'http://cdn.ckeditor.com/4.11.4/full-all/contents.css',
+        'assets/css/pastefromword.css'
+      ],
 
       // This is optional, but will let us define multiple different styles for multiple editors using the same CSS file.
       // bodyClass: 'document-editor',
@@ -186,7 +191,6 @@ export default class CKEditor4 extends React.PureComponent {
       ]
     }}
       
-        data="<p>Hello from CKEditor 4!</p>"
       />
     )
   }
