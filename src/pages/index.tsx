@@ -9,6 +9,8 @@ import QuillEditor from '@/components/ReactQuill'
 import TinyEditor from '@/components/TinyEditor'
 import TrixEditor from '@/components/TrixEditor'
 import FroalaEditor from '@/components/FroalaEditor'
+import PellEditor from '@/components/PellEditor'
+import MediumEditor from '@/components/MediumEditor'
 import styles from './index.less'
 
 const { TabPane } = Tabs;
@@ -35,14 +37,20 @@ export default () => (
     <TabPane tab="React-Quill" key="5">
       <QuillEditor />
     </TabPane>
-    <TabPane tab="Trix-Editor" key="7">
+    <TabPane tab="Trix" key="7">
       <TrixEditor />
     </TabPane>
-    <TabPane tab="Tiny-Editor" key="6">
+    <TabPane tab="Tiny" key="6">
       <TinyEditor />
     </TabPane>
-    <TabPane tab="Froala-Editor" key="8">
+    <TabPane tab="Froala" key="8">
       <FroalaEditor />
+    </TabPane>
+    <TabPane tab="Pell" key="9">
+      <PellEditor />
+    </TabPane>
+    <TabPane tab="MediumEditor" key="10">
+      <MediumEditor />
     </TabPane>
   </Tabs>
 )
