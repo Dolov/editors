@@ -15,6 +15,7 @@ import styles from './index.less'
 
 const { TabPane } = Tabs;
 
+console.log(process.env.NODE_ENV, 'process.env.NODE_ENV')
 
 function callback(key: string) {
   console.log(key);
